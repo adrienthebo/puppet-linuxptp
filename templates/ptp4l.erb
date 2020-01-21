@@ -1,2 +1,1 @@
-OPTIONS="-f <%= @conf_file %> <% @interfaces.sort.each do |interface| -%>
--i <%= interface -%> <% end -%>"
+OPTIONS="-m -q -f <%= @conf_file %> <%= @interfaces.sort.map { |i| "-i #{i}" }.join(" ") %>"
