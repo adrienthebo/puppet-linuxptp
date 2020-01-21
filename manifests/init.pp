@@ -17,6 +17,7 @@ class linuxptp(
   $summary_interval            = 0,
   $summary_updates             = 0,
   $package_name                = 'linuxptp',
+  $package_ensure              = 'present',
   $ptp4l_confdir               = '/etc/ptp4l',
   $ptp4l_rundir                = '/var/run/ptp4l',
   $ptp4l_service_name          = 'ptp4l',
@@ -31,7 +32,7 @@ class linuxptp(
   $message_tag                 = '',
 ) {
   package { $package_name:
-    ensure => present,
+    ensure => $package_ensure,
   }
 
   if ($single_instance) {
