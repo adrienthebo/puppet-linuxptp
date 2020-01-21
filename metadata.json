@@ -15,8 +15,14 @@
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "6"
+        "7"
       ]
     }
-  ]
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 6.0.0 < 7.0.0"
+    }
+  ],
 }
